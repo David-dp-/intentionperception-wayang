@@ -1,0 +1,1 @@
+:- compile(['utils.pro', 'ObserverToWorld.ecl', 'Observer/loader.pro']).

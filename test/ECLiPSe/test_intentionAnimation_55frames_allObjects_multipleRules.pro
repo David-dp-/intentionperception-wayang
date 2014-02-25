@@ -1,0 +1,5 @@
+intentionAnimation_55frames_allObjects_multipleRules_edgesAreCorrect :-
+	populateEdgeSummariesForVerification(intentionAnimation_55frames_allObjects_multipleRules_edgeSummaries),
+	processFrames.
+	
+intentionAnimation_55frames_allObjects_multipleRules_edgeSummaries([]).

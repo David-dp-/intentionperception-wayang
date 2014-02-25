@@ -1,0 +1,86 @@
+Requirements for Wayang Visualizer
+
+Challenges/Requirements
+
+1.	Currently, Wayang produces hundreds of logging statements that represent 'incomplete' and
+	'completed' edges, plus the process steps that led to generating these edges.
+1.1.	For scenarios used in verifications, the current method is to compare a set of expected
+		edges with the actual edges. This can be used to produce a set of missing edges and a set of
+		extraneous edges. These two sets are still hard to use for debugging, because the root
+		cause of the mismatch will usually lie with just one of them, and the rest result as a
+		cascading effect.
+		Ideally for verification scenarios, in addition to the stored set of edges, there would be
+		info about which edge was derived from which, so that the viz could show the missing ones
+		in red as a dependency graph, and selecting one would show what it would have been derived 
+		from.
+1.2.	It is even harder to tell if a non-verification run has inferred anything useful, because 
+		one must eyeball the listing at the end of the log for 'completed' edges that span all 
+		frames and whose predicate reflects a 'top-level concept' (e.g. a 'sentence' predicate when 
+		parsing text, or an 'impetus' predicate when ascribing causality). Furthermore, one must 
+		decide if ALL figures in a scenario should have at least one such completed edge, or if 
+		there should be some other criterion for determining success.
+		Although it may not help in cases where a predicate should cover more than one figure, the
+		proposed dependency graph would make this use case a bit easier.
+1.3.	It is hard to filter useful debugging info in the case of a failed run.
+
+Draft Specifications
+
+1.	Although it isn't a standard part of chart parser edge structures, each of our edges should have
+	both a unique id and a set of id's indicating what edges (if any) the current one is derived 
+	from.
+2.	There will be two panes, one on the left and one on the right, where one will show the
+	simulator's view of the figures and unfolding action, and the other will show the progress
+	of the chart parser.
+2.1.	We arrange the panes horizontally rather than vertically, because a vertical arrangement
+		could be mistaken to mean that the nodes of the chart somehow correspond to the placement
+		of the figures (but they don't).
+2.2.	The background of all panes is black to allow the use of as many colors as possible (Yellow
+		isn't usable with a white background, but all colors seem usable with a black background.)
+		However, red and orange are reserved for missing/extraneous edges in verification runs.
+
+3.	The chart view will resemble chart graphs shown in Gazdar & Mellish's NLP in Prolog book:
+	There is a horizontal series of nodes (each representing an input frame, with the first frame
+	leftmost), and curved arcs between them (arcs having arrows always pointing rightward).
+	The JUNG 3rd party Java graphing library for networks is likely to be useful here.
+	http://jung.sourceforge.net/
+3.1.	Nodes are shown as small gray circles
+3.2.	Arcs representing 'incomplete edges' should be dotted
+3.3.	Arcs representing 'completed edges' should be solid
+3.4.	Edges representing different predicates should be given different colors; edges representing
+		lists should be shown in white. A color key can be toggled between hidden and shown.
+3.5.	If there is more than one incomplete edge of the same color between two nodes, only one
+		arc should be shown, but it should be given a line weight proportional to the number of
+		edges it represents. The same applies to completed edges. Arcs of different colors should
+		never be conflated together.
+3.6.	The apex of an arc should reach a uniform level higher than all the edges it is derived
+		from. This provides a quick indicator of a run's 'furthest reach'.
+3.7.	Within the chart pane is a second pane used to display a text list. Positioning of this
+		pane is TBD. The text color should be light green or blue.
+3.8.	Selecting an arc by clicking on it causes all of the edges represented by that arc to be
+		listed in the text list pane. At the top of the pane, there should be a summary descriptor
+		such as "2 4 Completed edges", where 2 and 4 refer to the starting and ending nodes of the
+		arc, and where the summary indicates the arc's id and supporting id's.	
+		
+4.	A "replay" slider will sit under both the left and right panes.
+4.1.	The slider is disabled during the initial reasoning/play of a scenario, and becomes active
+		once the scenario finishes.
+4.2.	The slider has evenly-spaced positions marked by the corresponding frame number. The slider
+		will snap to the nearest position when released.
+4.3.	The slider and timeline are shown in gray.
+4.4.	The position of the slider tells the left and right pane to hide all information related
+		to later frames.
+		
+5.	The figures view is roughly the same as watching the SWF of a scenario. That is, the view shows
+	the position and shape/orientation of each figure in the current frame, and the dimensions of
+	the SWF background. Figures are always shown in gray.
+5.1.	The view also has an overlay that shows the id of each figure (a number in black shown over
+		the center of a figure), a dotted curvulinear path in gray showing the trajectory so far of
+		each figure, and solid, colored contours to show the expected next positions of each figure
+		(with toggle-able color key).
+5.2.	Within the view pane is a second pane used to display a text list. Positioning of this pane
+		is TBD. The text color should be light green or blue (but different from the color of the
+		text in the other pane).
+5.3.	Selecting a figure by clicking on it shows the CLP description of the figure in the second
+		pane.
+		
+END

@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Wayang_outputForLowLevelTests_JavaOnly">
+  <test name="Low-Level_JavaOnly">
+    <classes>
+       <class name="sg.ihpc.wayangTest.Test_SWFDescriber" />
+    </classes>
+  </test>
+</suite>

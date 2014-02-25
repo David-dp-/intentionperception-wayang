@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>ObserverModel</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipseclp.saros.development.SarosBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipseclp.saros.development.SarosNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>.project</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.project</location>
+		</link>
+		<link>
+			<name>.svn</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn</location>
+		</link>
+		<link>
+			<name>IncrementalParser.ecl</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/IncrementalParser.ecl</location>
+		</link>
+		<link>
+			<name>KnowledgeBase.ecl</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/KnowledgeBase.ecl</location>
+		</link>
+		<link>
+			<name>ObserverModel.ecl</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/ObserverModel.ecl</location>
+		</link>
+		<link>
+			<name>loaderDebug.ecl</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/loaderDebug.ecl</location>
+		</link>
+		<link>
+			<name>loaderForObserverModel.ecl</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/loaderForObserverModel.ecl</location>
+		</link>
+		<link>
+			<name>utils.ecl</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/utils.ecl</location>
+		</link>
+		<link>
+			<name>.svn/entries</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/entries</location>
+		</link>
+		<link>
+			<name>.svn/format</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/format</location>
+		</link>
+		<link>
+			<name>.svn/prop-base</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/prop-base</location>
+		</link>
+		<link>
+			<name>.svn/props</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/props</location>
+		</link>
+		<link>
+			<name>.svn/text-base</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/text-base</location>
+		</link>
+		<link>
+			<name>.svn/tmp</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/tmp</location>
+		</link>
+		<link>
+			<name>.svn/text-base/KnowledgeBase.ecl.svn-base</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/text-base/KnowledgeBase.ecl.svn-base</location>
+		</link>
+		<link>
+			<name>.svn/text-base/ObserverModel.ecl.svn-base</name>
+			<type>1</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/text-base/ObserverModel.ecl.svn-base</location>
+		</link>
+		<link>
+			<name>.svn/tmp/prop-base</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/tmp/prop-base</location>
+		</link>
+		<link>
+			<name>.svn/tmp/props</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/tmp/props</location>
+		</link>
+		<link>
+			<name>.svn/tmp/text-base</name>
+			<type>2</type>
+			<location>C:/Documents and Settings/pautlerd/Desktop/Projects/EclipseWorkspace/Wayang/src/ECLiPSe/Observer/.svn/tmp/text-base</location>
+		</link>
+	</linkedResources>
+</projectDescription>

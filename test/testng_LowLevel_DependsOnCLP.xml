@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Wayang_outputForLowLevelTests_DependsOnCLP">
+  <test name="Low-Level_DependsOnCLP">
+    <classes>
+       <class name="sg.ihpc.wayangTest.Test_PerceptibilityFilter" />
+       <class name="sg.ihpc.wayangTest.Test_KnowledgeBase_utils" />
+    </classes>
+  </test>
+</suite>
